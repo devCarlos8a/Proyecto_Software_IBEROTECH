@@ -6,7 +6,7 @@
         <h2>Contacto</h2>
         <p>Ponte en contacto con nosotros a través del siguiente formulario o información.</p>
         
-        <form action="procesar_contacto.php" method="POST">
+        <form action="includes/procesar_contacto.php" method="POST">
             <div>
                 <label for="nombre">Nombre:</label>
                 <input type="text" id="nombre" name="nombre" required>
