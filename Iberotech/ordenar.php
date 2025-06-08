@@ -64,12 +64,44 @@
                 <input class="col-span-1 md:col-span-2 p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none" id="numero-tarjeta" placeholder="Ingrese el número de su tarjeta" type="text" />
             </div>
             <div class="flex justify-center pt-6">
-                <button class="bg-gray-800 hover:bg-gray-900 text-white font-semibold py-3 px-12 rounded-lg shadow-md transition duration-300 ease-in-out transform hover:scale-105" type="submit">
+                <button id="btnRentar" type="button" class="bg-gray-800 hover:bg-gray-900 text-white font-semibold py-3 px-12 rounded-lg shadow-md transition duration-300 ease-in-out transform hover:scale-105">
                     Rentar equipo
                 </button>
+
             </div>
         </form>
     </div>
+<div id="modalConfirmacion" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden">
+    <div class="bg-white p-8 rounded-lg shadow-lg text-center space-y-4 w-full max-w-sm">
+        <p class="text-lg font-semibold">¿Estás seguro que deseas proceder con el pago?</p>
+        <div class="flex justify-center space-x-6">
+            <button id="confirmarSi" class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700">Sí</button>
+            <button id="confirmarNo" class="bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700">No</button>
+        </div>
+    </div>
+</div>
+
+<script>
+    const btnRentar = document.getElementById("btnRentar");
+    const modal = document.getElementById("modalConfirmacion");
+    const btnSi = document.getElementById("confirmarSi");
+    const btnNo = document.getElementById("confirmarNo");
+
+    btnRentar.addEventListener("click", () => {
+        modal.classList.remove("hidden");
+    });
+
+    btnSi.addEventListener("click", () => {
+        modal.classList.add("hidden");
+        alert("✅ Equipo rentado satisfactoriamente.");
+        document.querySelector("form").submit();
+        window.location.href = "index.php";
+    });
+
+    btnNo.addEventListener("click", () => {
+        modal.classList.add("hidden");
+    });
+</script>
 
 </body>
 
