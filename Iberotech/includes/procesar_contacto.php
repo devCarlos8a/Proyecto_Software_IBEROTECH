@@ -6,7 +6,7 @@ require_once '../src/PHPMailer/Exception.php';
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
-// Captura de datos del formulario
+
 $nombre = htmlspecialchars($_POST['nombre']);
 $email = filter_var($_POST['email'], FILTER_VALIDATE_EMAIL);
 $mensaje = htmlspecialchars($_POST['mensaje']);
@@ -23,8 +23,8 @@ try {
     $mail->isSMTP();
     $mail->Host = 'smtp.gmail.com';
     $mail->SMTPAuth = true;
-    $mail->Username = 'rentasiberotech@gmail.com'; // Cambia por tu correo real
-    $mail->Password = 'pnxf euxu ywlu mmbi'; // Usa clave de aplicación, no tu contraseña normal
+    $mail->Username = 'rentasiberotech@gmail.com';
+    $mail->Password = 'pnxf euxu ywlu mmbi';
     $mail->SMTPSecure = 'tls';
     $mail->Port = 587;
     

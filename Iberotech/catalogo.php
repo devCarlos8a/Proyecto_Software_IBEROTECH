@@ -155,6 +155,13 @@
             </nav>
         </section>
     </main>
+<script>
+    const usuarioActivo = localStorage.getItem("usuarioActivo");
+    if (!usuarioActivo) {
+        alert("Debes iniciar sesión para ver el catálogo.");
+        window.location.href = "login.php";
+    }
+</script>
 </body>
 
 </html>

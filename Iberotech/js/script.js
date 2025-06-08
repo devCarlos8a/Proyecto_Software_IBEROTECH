@@ -4,11 +4,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Ejemplo: Alerta al hacer clic en el botón de registro
     const registerButton = document.querySelector('.btn-register');
-    if(registerButton) {
-        registerButton.addEventListener('click', function() {
-            alert('Funcionalidad de registro próximamente!');
-        });
-    }
+    if (registerButton) {
+    registerButton.addEventListener('click', function () {
+        window.location.href = 'registro.php';
+    });
+}
 
     const loginButton = document.querySelector('.btn-login');
     if(loginButton) {
