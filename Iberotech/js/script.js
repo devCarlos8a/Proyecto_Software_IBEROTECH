@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const loginButton = document.querySelector('.btn-login');
     if(loginButton) {
         loginButton.addEventListener('click', function() {
-            alert('Funcionalidad de inicio de sesión próximamente!');
+            window.location.href = 'login.php';
         });
     }
 
